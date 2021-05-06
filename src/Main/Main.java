@@ -1,5 +1,7 @@
+package Main;
+
 /**
- * KWC Program that uses the KWC tricklist to...
+ * Main.KWC Program that uses the Main.KWC tricklist to...
  *
  * @Author Jaymin West
  */

@@ -1,3 +1,5 @@
+package Main;
+
 import java.util.ArrayList;
 
 /**
@@ -7,7 +9,7 @@ public class TrickList {
     private ArrayList<Level> levels;
 
     /**
-     * Trick List Constructors
+     * Main.Trick List Constructors
      */
     TrickList()
     {
@@ -17,6 +19,14 @@ public class TrickList {
     TrickList(ArrayList<Level> levelsParam)
     {
         levels = levelsParam;
+    }
+
+
+    @Override
+    public String toString() {
+        return "TrickList{" +
+                "levels=" + levels +
+                '}';
     }
 
     /**

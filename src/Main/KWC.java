@@ -1,29 +1,37 @@
+package Main;
+
+import java.io.File;
+import java.util.Scanner;
+
 /**
- * The KWC Class, used for making any instance of KWC
+ * The Main.KWC Class, used for making any instance of Main.KWC
  */
 public class KWC
 {
     private TrickList trickList;
     private int year;
     private static KWC singleInstance; //Singleton
+    private File inFile;
+    private String fileName;
 
     /**
-     * KWC Constructors
+     * Main.KWC Constructors
      */
-    KWC()
+    public KWC()
     {
         trickList = new TrickList();
         year = -1;
-
+        fileName = getFileName();
+        inFile = new File(fileName);
     }
 
-    KWC(int yearParam)
+    public KWC(int yearParam)
     {
         trickList = new TrickList();
         year = year;
     }
 
-    KWC(int yearParam, TrickList trickListParam)
+    public KWC(int yearParam, TrickList trickListParam)
     {
         year = yearParam;
         trickList  = trickListParam;
@@ -40,6 +48,19 @@ public class KWC
             singleInstance = new KWC();
         }
         return singleInstance;
+    }
+
+    private String getFileName() {
+        String fileName = "";
+
+        Scanner userInput = new Scanner(System.in);
+
+        System.out.println("Enter in Desired Year:");
+            int year = userInput.nextInt();
+
+        fileName += year + ".txt";
+
+        return fileName;
     }
 
     /**
