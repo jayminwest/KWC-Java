@@ -8,5 +8,6 @@ package Main;
 public class Main {
     public static void main(String args[]) {
         KWC kwc2021 = new KWC(2021);
+        System.out.println("Finished");
     }
 }

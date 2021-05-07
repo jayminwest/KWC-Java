@@ -63,6 +63,11 @@ public class KWC
         return fileName;
     }
 
+    private void makeFile(String name)
+    {
+
+    }
+
     /**
      * Getters and Setters:
      */
