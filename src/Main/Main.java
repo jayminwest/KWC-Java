@@ -7,7 +7,9 @@ package Main;
  */
 public class Main {
     public static void main(String args[]) {
-        KWC kwc2021 = new KWC(2021);
+        KWC kwc2020 = new KWC(2020);
+        kwc2020.getTrickList().readInFile();
+        System.out.println(kwc2020.getTrickList().getLevels().get(1).toString());
         System.out.println("Finished");
     }
 }

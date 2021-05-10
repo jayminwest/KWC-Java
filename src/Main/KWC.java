@@ -17,23 +17,23 @@ public class KWC
     /**
      * Main.KWC Constructors
      */
-    public KWC()
-    {
-        trickList = new TrickList();
-        year = -1;
-        fileName = getFileName();
-        inFile = new File(fileName);
+    KWC() {
+        System.out.println("New KWC Instance Created");
+        inFile = new File(getFileName());
+        trickList = new TrickList(inFile);
     }
 
     public KWC(int yearParam)
     {
-        trickList = new TrickList();
-        year = year;
+        year = yearParam;
+        inFile = new File(System.getProperty("user.dir") + "\\src\\TrickListFiles\\" + year + ".txt");
+        trickList = new TrickList(inFile);
     }
 
     public KWC(int yearParam, TrickList trickListParam)
     {
         year = yearParam;
+        inFile = new File(getFileName());
         trickList  = trickListParam;
     }
 

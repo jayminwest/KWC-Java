@@ -11,25 +11,25 @@ public class Level {
      */
     public Level()
     {
+        levelNumber = -1;
         tricks = new ArrayList<Trick>();
     }
 
     public Level(int levelNumberParam)
     {
         levelNumber = levelNumberParam;
+        tricks = new ArrayList<Trick>();
     }
 
     public Level(ArrayList<Trick> tricksParam)
     {
+        levelNumber = -1;
         tricks = tricksParam;
     }
 
     @Override
     public String toString() {
-        return "Level{" +
-                "tricks=" + tricks +
-                ", levelNumber=" + levelNumber +
-                '}';
+        return "Level " + levelNumber + ": \n" + "Tricks: \n" + tricks;
     }
 
     /**

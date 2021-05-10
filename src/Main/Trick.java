@@ -3,16 +3,19 @@ package Main;
 public class Trick {
     private String trickName;
     private int trickSubLevel;
-    private String playerName;
 
     /**
      * Constructors:
      */
-    public Trick(String trickName, int trickSubLevel, String playerName)
+    Trick() {
+        trickName = "NULL";
+        trickSubLevel = -1;
+    }
+
+    public Trick(String trickName, int trickSubLevel)
     {
         this.trickName = trickName;
         this.trickSubLevel = trickSubLevel;
-        this.playerName = playerName;
     }
 
     /**
@@ -22,11 +25,7 @@ public class Trick {
      */
     @Override
     public String toString() {
-        return "Trick{" +
-                "trickName='" + trickName + '\'' +
-                ", trickSubLevel=" + trickSubLevel +
-                ", playerName='" + playerName + '\'' +
-                '}';
+        return "Trick Name: " + trickName + ", Sublevel:  " + trickSubLevel + '\n';
     }
 
     /**
@@ -49,14 +48,5 @@ public class Trick {
     public void setTrickSubLevel(int trickSubLevel)
     {
         this.trickSubLevel = trickSubLevel;
-    }
-
-    public String getPlayerName() {
-        return playerName;
-    }
-
-    public void setPlayerName(String playerName)
-    {
-        this.playerName = playerName;
     }
 }

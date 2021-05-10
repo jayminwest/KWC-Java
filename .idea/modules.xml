@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KWC.iml" filepath="$PROJECT_DIR$/KWC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/KWC-Java.iml" filepath="$PROJECT_DIR$/.idea/KWC-Java.iml" />
     </modules>
   </component>
 </project>
