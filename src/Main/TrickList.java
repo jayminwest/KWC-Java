@@ -41,7 +41,6 @@ public class TrickList {
 
         for (int i = 0; i < 10; ++i) {
             levels.add(new Level());
-
         }
 
         try {
@@ -51,14 +50,14 @@ public class TrickList {
                 tempLine = reader.nextLine();
 
                 if (tempLine.contains("Level")) {
-                    levels.set(levelsIndex, new Level(levelsIndex));
+                    levels.set(levelsIndex, new Level(levelsIndex + 1)); //+1 to change level number away from index number
 
                     for (int trickSubLevel = 0; trickSubLevel <= 9; ++trickSubLevel) {
                         levels.get(levelsIndex).getTricks().add(trickSubLevel, new Trick(reader.nextLine(), trickSubLevel + 1));
                     }
-                }
 
-                levelsIndex++;
+                    levelsIndex++;
+                }
             }
 
         } catch (FileNotFoundException e) {
@@ -88,4 +87,5 @@ public class TrickList {
     {
         this.levels = levels;
     }
+
 }
